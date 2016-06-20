@@ -4,6 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 
+    public function __construct() {
+ 		parent::__construct();
+ 		$this->load->library('auth');
+    }
+
+
 	public function index()
 	{
 		$data = array();
@@ -13,7 +19,7 @@ class Home extends CI_Controller {
 
 
 	public function test() {
-		$this->load->library('auth');
+		
 		echo $this->auth->ver();
 		$this->auth->login("admin@admin.nz","test",true);
 		echo $this->auth->get_error();
