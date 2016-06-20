@@ -17,6 +17,14 @@ class Auth {
         	$this->CI = get_instance();
         	$this->CI->load->library('session');
         	$this->CI->load->database();
+                if(isset($this->CI->session->user_logged) && ($this->CI->session->user_logged))
+                {
+                        $this->user = $this->CI->session->user;
+                } else {
+                        $this->CI->session->user_logged = false;
+                        $this->CI->session->user = array();
+                }
+
         }
 
         public function get_error() {
@@ -27,6 +35,9 @@ class Auth {
         	return $this->ver;
         }
 
+        public function get_user() {
+                return $this->user;
+        }
 
         public function login($email,$password,$remember) {
         	$res = $this->_login($email,$password,$remember);
