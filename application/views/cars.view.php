@@ -89,5 +89,5 @@
 <?php echo $car->engine_size; ?><br>
 <?php echo $car->seats; ?><br>
 <?php echo $car->price; ?><br>
-<img src="imgs/cars/<?php echo $car->photo; ?>" alt="">
+<img src="assets/imgs/cars/<?php echo $car->photo; ?>" alt="">
 <?php endforeach; ?>
