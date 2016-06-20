@@ -72,3 +72,22 @@
 		<div class="clear"></div>
 	</div>
 </div>
+
+
+
+
+
+
+<?php foreach($cars as $car): ?>
+<hr>
+<?php echo $car->brand; ?><br>
+<?php echo $car->model; ?><br>
+<?php echo $car->type; ?><br>
+<?php echo $car->color; ?><br>
+<?php echo $car->mileage; ?><br>
+<?php echo $car->year; ?><br>
+<?php echo $car->engine_size; ?><br>
+<?php echo $car->seats; ?><br>
+<?php echo $car->price; ?><br>
+<img src="imgs/cars/<?php echo $car->photo; ?>" alt="">
+<?php endforeach; ?>
