@@ -1,0 +1,67 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  background-image: url('../pic/bg.jpeg');
+  background-repeat: repeat;  
+}
+
+.form-signin {
+  max-width: 530px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+
+.panel-pactel {
+  border-color: #704C25;
+  background-color: #BA7E3D;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+}
+.panel-pactel > .panel-heading {
+  color: #333;
+  background-color: #BA7E3D;
+  border-color: #704C25;
+}
+
+.panel-pactel > .panel-footer {
+  color: #333;
+  background-color: #BA7E3D;
+  border-color: #704C25;
+}
+
+.panel-pactel > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #704C25; 
+}
+.panel-pactel > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #704C25;
+}
+.panel-pactel > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #704C25;
+  background-color: #BA7E3D;
+}
+
+.borderless tbody tr td, .borderless thead tr th {
+    border: none;
+}
