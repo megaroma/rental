@@ -82,7 +82,7 @@
         <li>
           <a href="http://<?php echo base_url(); ?>home/logout" class="external">Logout</a>
         </li>
-    <?php else; ?>
+    <?php else: ?>
         <li>
           <a href="http://<?php echo base_url(); ?>home/register" class="external">Registration</a>
         </li>
