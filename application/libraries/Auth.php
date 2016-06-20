@@ -12,6 +12,7 @@ class Auth {
 	private $user;
 	private $error_n = 0;
 
+
         public function __construct() {
         	$this->CI = get_instance();
         	$this->CI->load->library('session');

@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data = array();
-		$data['title'] = "Cer Rental";
+		$data['title'] = "Car Rental";
 		master_view($this, 'index' , $data);
 	}
 
