@@ -1,6 +1,6 @@
 <?php
 function asset_url($name){
-   return base_url().'assets/'.$name;
+   return "http://".base_url().'assets/'.$name;
 }
 
 
