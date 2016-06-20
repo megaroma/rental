@@ -78,10 +78,10 @@
               </li>
 			  
         <li>
-          <a href="home/register">Registration</a>
+          <a href="home/register" class="external">Registration</a>
         </li>
 			  <li>
-          <a href="home/login">Login</a>
+          <a href="home/login" class="external">Login</a>
         </li>
 
 
