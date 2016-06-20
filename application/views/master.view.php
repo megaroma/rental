@@ -77,7 +77,7 @@
               </li>
     <?php if($this->auth->check()): ?>
         <li>
-          <a href="http://<?php echo base_url(); ?>user/profile" class="external"><?php echo $this->auth->get_user()->fullname; ?></a>
+          <a href="http://<?php echo base_url(); ?>user/profile" class="external"><?php echo $this->auth->get_user()->full_name; ?></a>
         </li>
         <li>
           <a href="http://<?php echo base_url(); ?>home/logout" class="external">Logout</a>
