@@ -31,8 +31,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <?php if($this->auth->check()): ?>
-    <?php endif; ?>
+ 
 
     <script>
       $( document ).ready(function() {
@@ -76,13 +75,21 @@
 			  <li>
                 <a href="#"></a>
               </li>
-			  
+    <?php if($this->auth->check()): ?>
+        <li>
+          <a href="http://<?php echo base_url(); ?>user/profile" class="external"><?php echo $this->auth->get_user()->fullname; ?></a>
+        </li>
+        <li>
+          <a href="http://<?php echo base_url(); ?>home/logout" class="external">Logout</a>
+        </li>
+    <?php else; ?>
         <li>
           <a href="http://<?php echo base_url(); ?>home/register" class="external">Registration</a>
         </li>
 			  <li>
           <a href="http://<?php echo base_url(); ?>home/login" class="external">Login</a>
         </li>
+    <?php endif; ?>
 
 
             </ul>

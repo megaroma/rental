@@ -52,6 +52,12 @@ class Home extends CI_Controller {
 		master_view($this, 'login' , $data);		
 	}
 
+
+	public function logout() {
+		$this->auth->logout();
+		redirect("http://".base_url().'home/login', 'refresh');
+	}
+
 	public function register() {
 		$data = array();
 		$data['title'] = "Car Rental - register page";
