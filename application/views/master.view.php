@@ -76,12 +76,15 @@
 			  <li>
                 <a href="#"></a>
               </li>
+			  
+        <li>
+          <a href="home/register">Registration</a>
+        </li>
 			  <li>
-                <a href="#">Registration</a>
-              </li>
-			  <li>
-                <a href="#">Login</a>
-              </li>
+          <a href="home/login">Login</a>
+        </li>
+
+
             </ul>
           </div>
         </div>

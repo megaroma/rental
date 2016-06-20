@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 
 
 	public function test() {
-		
+		/*		
 		echo $this->auth->ver();
 		$this->auth->login("admin@admin.nz","test",true);
 		echo $this->auth->get_error();
@@ -27,6 +27,21 @@ class Home extends CI_Controller {
 			echo "<br>true";
 		else
 			echo "<br>false";
+			*/
 	}
+
+
+	public function login() {
+		$data = array();
+		$data['title'] = "Car Rental - login page";
+		master_view($this, 'login' , $data);		
+	}
+
+	public function register() {
+		$data = array();
+		$data['title'] = "Car Rental - register page";
+		master_view($this, 'register' , $data);		
+	}
+
 
 }
