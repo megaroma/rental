@@ -1,5 +1,5 @@
 <?php
-class Cars extends CI_Model {
+class Cars_m extends CI_Model {
 
         public function __construct()
         {

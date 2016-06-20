@@ -7,7 +7,7 @@ class Cars extends CI_Controller {
     public function __construct() {
  		parent::__construct();
  		$this->load->library('auth');
- 		$this->load->model('cars');
+ 		$this->load->model('cars_m');
     }
 
 
@@ -15,7 +15,7 @@ class Cars extends CI_Controller {
 	{
 		$data = array();
 		$data['title'] = "Car Rental";
-		$data['cars'] = $this->cars->all_available();
+		$data['cars'] = $this->cars_m->all_available();
 		master_view($this, 'cars' , $data);
 	}
 
