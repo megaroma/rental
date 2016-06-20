@@ -34,6 +34,21 @@ class Home extends CI_Controller {
 	public function login() {
 		$data = array();
 		$data['title'] = "Car Rental - login page";
+		$data['error'] = false;
+		$data['error_msg'] = "";
+		$data['email'] = input_post("email","");
+		$password = input_post("password", "");
+		$remember = input_post("remember","");
+		if($data['email'] != "") {
+			if($this->auth->login($data['email'],$password,$remember)) {
+				redirect('/', 'refresh');
+			} else {
+				$data['error'] = true;
+				$data['error_msg'] = $this->auth->get_error();
+			}
+		}
+
+
 		master_view($this, 'login' , $data);		
 	}
 

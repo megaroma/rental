@@ -12,3 +12,9 @@ function master_view($controller, $name , $data) {
 
 	$controller->load->view("master.view.php",$data);
 }
+
+
+
+function input_post($name, $default) {
+	return isset($_POST[$name]) ? $_POST[$name] : $default;
+}
