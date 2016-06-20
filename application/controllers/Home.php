@@ -41,7 +41,7 @@ class Home extends CI_Controller {
 		$remember = input_post("remember","");
 		if($data['email'] != "") {
 			if($this->auth->login($data['email'],$password,$remember)) {
-				redirect('/', 'refresh');
+				redirect("http://".base_url().'home', 'refresh');
 			} else {
 				$data['error'] = true;
 				$data['error_msg'] = $this->auth->get_error();

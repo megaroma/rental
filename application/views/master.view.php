@@ -78,10 +78,10 @@
               </li>
 			  
         <li>
-          <a href="http://<?php echo base_url(); ?>/home/register" class="external">Registration</a>
+          <a href="http://<?php echo base_url(); ?>home/register" class="external">Registration</a>
         </li>
 			  <li>
-          <a href="http://<?php echo base_url(); ?>/home/login" class="external">Login</a>
+          <a href="http://<?php echo base_url(); ?>home/login" class="external">Login</a>
         </li>
 
 
