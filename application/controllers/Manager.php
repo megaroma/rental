@@ -32,7 +32,7 @@ class Manager extends CI_Controller {
 
 
 
-	public function roles() {
+	public function cars() {
 		$data = array();
 		$crud = $this->grocery_crud;
 		$crud->set_table('cars');
