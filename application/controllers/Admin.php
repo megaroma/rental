@@ -33,6 +33,8 @@ class Admin extends CI_Controller {
 	public function users() {
 		$data = array();
 		$this->grocery_crud->set_table('users');
+		$this->grocery_crud->set_subject("Manage Users");
+		$this->grocery_crud->columns("full_name","age","driver_licence","gender","email","active");
 		admin_view($this, 'users' , $data);
 	}
 
