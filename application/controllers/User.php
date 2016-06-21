@@ -72,7 +72,9 @@ class User extends CI_Controller {
 		$new_password = input_post("new_password","");		
 
 		$this->form_validation->set_rules('old_password', 'Current Password', 'required|md5|in_list['.$password.']');
-
+		$this->form_validation->set_rules('new_password', 'New Password', 'required');
+		$this->form_validation->set_rules('new_passconf', 'Password Confirmation', 'required|matches[new_password]');
+		$this->form_validation->set_message('in_list', 'Incorrect the current password');
 
 		if($action == "submit") {
 			if ($this->form_validation->run() == FALSE) {
