@@ -103,4 +103,13 @@ class User extends CI_Controller {
 		master_view($this, 'profile_password' , $data); 
     }
 
+
+
+    public function orders() {
+		$data = array();
+		$data['title'] = "Car Rental- My Orders";
+
+		master_view($this, 'profile_orders' , $data); 
+    }
+
 }
