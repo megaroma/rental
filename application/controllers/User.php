@@ -65,7 +65,7 @@ class User extends CI_Controller {
 		$data['title'] = "Car Rental- Change Password";
 		$data['error'] = false;
 		$data['updated'] = false;
-		$user = (array) $this->auth->get_user();
+		$user = $this->auth->get_user();
 		$password = $user->password;
 
 		$this->form_validation->set_rules('password', 'Password', 'required');
