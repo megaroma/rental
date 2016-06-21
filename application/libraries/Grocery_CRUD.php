@@ -336,6 +336,7 @@ class grocery_CRUD_Field_Types
 					$is_image = !empty($value) &&
 					( substr($value,-4) == '.jpg'
 							|| substr($value,-4) == '.png'
+							|| substr($value,-4) == '.JPG'
 							|| substr($value,-5) == '.jpeg'
 							|| substr($value,-4) == '.gif'
 							|| substr($value,-5) == '.tiff')
