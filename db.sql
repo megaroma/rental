@@ -65,7 +65,7 @@ ALTER TABLE `cars`
  ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `orders`
- ADD PRIMARY KEY (`id`), ADD KEY `fd` (`fd`,`td`);
+ ADD KEY `fd` (`fd`,`td`);
 
 ALTER TABLE `roles`
  ADD PRIMARY KEY (`id`);
@@ -76,8 +76,6 @@ ALTER TABLE `users`
 
 ALTER TABLE `cars`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
-ALTER TABLE `orders`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 ALTER TABLE `roles`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 ALTER TABLE `users`

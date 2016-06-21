@@ -53,7 +53,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand nav-external" href="#home"><strong>CAR RENTAL</strong></a>
+            <a class="navbar-brand nav-external" href="http://<?php echo base_url(); ?>"><strong>CAR RENTAL</strong></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
