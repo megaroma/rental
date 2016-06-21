@@ -73,7 +73,7 @@
   </head>
 
   <body>
-
+  	<div class="container">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -119,7 +119,7 @@
 
 
 <?php echo $content; ?>
-
+</div>
     <script src="<?php echo asset_url('js/ie10-viewport-bug-workaround.js');?>"></script>
   </body>
 </html>
