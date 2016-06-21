@@ -37,7 +37,7 @@ class Manager extends CI_Controller {
 		$crud = $this->grocery_crud;
 		$crud->set_table('cars');
 		$crud->set_crud_url_path("http://".base_url().'manager/cars');
-		$crud->set_field_upload('photo','assets/imgs/cars');
+		$crud->set_field_upload('photo',"http://".base_url().'assets/imgs/cars');
 		admin_view($this, 'crud' , $data);
 
 	}
