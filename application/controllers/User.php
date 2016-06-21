@@ -7,14 +7,15 @@ class User extends CI_Controller {
     public function __construct() {
  		parent::__construct();
  		$this->load->library('auth');
+ 		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
  		if(!$this->auth->check()) {
  			redirect("http://".base_url().'home/login', 'refresh');
  		}
     }
 
     public function profile() {
-		$this->load->helper(array('form', 'url'));
-		$this->load->library('form_validation');
+
 
 		$this->form_validation->set_rules('full_name', 'Full Name', 'required');
 		$this->form_validation->set_rules('driver_licence', 'Driver Licence', 'required');
@@ -56,5 +57,30 @@ class User extends CI_Controller {
 		master_view($this, 'profile_edit' , $data);    	
     }
 
+
+
+
+    public function password() {
+		$data = array();
+		$data['title'] = "Car Rental- Change Password";
+		$data['error'] = false;
+		$data['updated'] = false;
+		$user = (array) $this->auth->get_user();
+		$password = $user->password;
+
+		$this->form_validation->set_rules('password', 'Password', 'required');
+
+
+		if($action == "submit") {
+			if ($this->form_validation->run() == FALSE) {
+				$data['error'] = true;
+			} else {
+
+				$data['updated'] = true;
+			}			
+		}
+
+		master_view($this, 'profile_password' , $data); 
+    }
 
 }

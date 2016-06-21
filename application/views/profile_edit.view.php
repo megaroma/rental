@@ -2,9 +2,9 @@
 <div class="row">
     <div class="col-sm-3 col-md-2">
  		<div class="list-group">
-  			<a href="#" class="list-group-item active">Info</a>
-  			<a href="#" class="list-group-item">Change Password</a>
-  			<a href="#" class="list-group-item">My Orders</a>
+  			<a href="http://<?php echo base_url(); ?>user/profile" class="list-group-item active">Info</a>
+  			<a href="http://<?php echo base_url(); ?>user/password" class="list-group-item">Change Password</a>
+  			<a href="http://<?php echo base_url(); ?>user/orders" class="list-group-item">My Orders</a>
 		</div>
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -18,6 +18,7 @@
  <?php endif; ?>
  <?if($updated): ?>
   <div class="alert alert-success" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   		<strong>Success</strong> Your profile was updated. 
   </div>
  <?php endif; ?>
