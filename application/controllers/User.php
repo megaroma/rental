@@ -18,7 +18,7 @@ class User extends CI_Controller {
 		$data = array();
 		$data['title'] = "Car Rental- User Profile";
 
-		$user = $this->auth->get_user();
+		$user = (array) $this->auth->get_user();
 
 
 		$data += $user;
