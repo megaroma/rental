@@ -1,14 +1,14 @@
 <div class="container">
+<h1 class="page-header text-center">Change Password:</h1>
 <div class="row">
-    <div class="col-sm-3 col-md-2">
+    <div class="col-sm-3 col-md-3">
  		<div class="list-group">
-  			<a href="http://<?php echo base_url(); ?>user/profile" class="list-group-item">Info</a>
-  			<a href="http://<?php echo base_url(); ?>user/password" class="list-group-item active">Change Password</a>
-  			<a href="http://<?php echo base_url(); ?>user/orders" class="list-group-item">My Orders</a>
+  			<a href="http://<?php echo base_url(); ?>user/profile" class="list-group-item left-menu">Info</a>
+  			<a href="http://<?php echo base_url(); ?>user/password" class="list-group-item active left-menu">Change Password</a>
+  			<a href="http://<?php echo base_url(); ?>user/orders" class="list-group-item left-menu">My Orders</a>
 		</div>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Change Password:</h1>
+    <div class="col-sm-9 main">
 
  <?if($error): ?>
   <div class="alert alert-danger" role="alert">
@@ -54,7 +54,7 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Change</button>
+      <button type="submit" class="btn btn-default car_button">Change</button>
     </div>
   </div>
 

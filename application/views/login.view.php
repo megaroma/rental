@@ -1,47 +1,6 @@
- <style type="text/css">
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
- </style>
-  <div class="container">
+<div class="container">
+  <div class="row">
+  <div class="col-md-4 col-md-offset-4">
   <?if($error): ?>
   <div class="alert alert-danger" role="alert">
   	<?php echo $error_msg; ?>	
@@ -59,7 +18,9 @@ body {
             <input type="checkbox" name="remember" value="remember-me"> Remember me
           </label>
         </div>
+		<a href="http://<?php echo base_url(); ?>#">Forget Password?</a>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
-    </div> <!-- /container -->
+	</div>
+	</div>
+</div> <!-- /container -->

@@ -9,6 +9,7 @@ https://www.flickr.com/photos/dellphotos/8071882701/sizes/l/
 body {
 	font-family: 'Roboto', sans-serif;
   color: #444;
+
 }
 h1,
 h2,
@@ -693,4 +694,28 @@ padding: 2px 15px;
     .heroText {margin-top: 60%;    }
     .heroText h2{font-size: 40px; line-height: 40px;}
     .heroText h2 strong{font-size: 25px;}
+}
+
+.car_button {
+    font-size: 19px;
+    font-weight: bold;
+	background: #1f1f1f;
+	border-color: #b40f02;
+	color: #fff;
+}
+.list-group>a.active {
+background: #2c2c2c;
+color: #fff;
+border-color: #2c2c2c;
+}
+
+.left-menu {
+    background: #b40f02;
+	color: #fff !important;
+	border-color: #2c2c2c;
+}
+.left-menu:hover {
+    background: #b40f02;
+	color: #fff !important;
+	border-color: #2c2c2c;
 }

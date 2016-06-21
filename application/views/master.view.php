@@ -58,10 +58,10 @@
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
-                <a href="#home">Home</a>
+                <a href="/" class="external">Home</a>
               </li>
               <li>
-                <a href="#">Cars</a>
+                <a href="http://<?php echo base_url(); ?>cars" class="external">Cars</a>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -105,7 +105,7 @@
 	<footer id="footer">
       <div class="container"> 
         <div class="row">
-          <div class="col-lg-12 animated hiding" data-animation="fadeInUp">
+          <div class="col-lg-12 animated hiding">
             <ul class="social list-inline ">
               <li>
                 <a class="facebook" href="http://www.facebook.com" title="Facebook">
