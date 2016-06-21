@@ -47,7 +47,7 @@ class Manager extends CI_Controller {
 
 
 	public function callback_photo ($value = '', $primary_key = null) {
-			return $value;
+			return "http://".$value;
 		}
 
 
