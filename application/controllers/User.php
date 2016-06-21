@@ -9,6 +9,7 @@ class User extends CI_Controller {
  		$this->load->library('auth');
  		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
+		$this->load->library('email');
  		if(!$this->auth->check()) {
  			redirect("http://".base_url().'home/login', 'refresh');
  		}
@@ -81,11 +82,20 @@ class User extends CI_Controller {
 				$data['error'] = true;
 			} else {
 				$new_data['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
-				$new_data['password'] = $new_password;
+				$new_data['password'] = md5($new_password);
 
 				$this->db->where('id', $user->id);
 				$this->db->update('users', $new_data);
+
 				
+
+				$this->email->from('no_reply@rental.nteconlinecourses.tk', 'NTEC Rental Car');
+				$this->email->to($user->email);
+				$this->email->subject('Your Password has been changed');
+				$this->email->message('Your new password: '.$new_password);
+				$this->email->send();
+
+
 				$data['updated'] = true;
 			}			
 		}
