@@ -79,6 +79,11 @@
         <li>
           <a href="http://<?php echo base_url(); ?>user/profile" class="external"><?php echo $this->auth->get_user()->full_name; ?></a>
         </li>
+        <?php if(($this->auth->has_role("admin")) || ($this->auth->has_role("staff"))): ?>
+        <li>
+          <a href="http://<?php echo base_url(); ?>admin" class="external">Admin Page</a>
+        </li>          
+        <?php endif; ?>
         <li>
           <a href="http://<?php echo base_url(); ?>home/logout" class="external">Logout</a>
         </li>
