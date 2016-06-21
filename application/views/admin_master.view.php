@@ -26,9 +26,9 @@ foreach($crud->css_files as $file): ?>
     <link type="text/css" rel="stylesheet" href="<?php echo "http://".$file; ?>" />
  
 <?php endforeach; ?>
-<?php foreach($crud->js_files as "http://".$file): ?>
+<?php foreach($crud->js_files as $file): ?>
  
-    <script src="<?php echo $file; ?>"></script>
+    <script src="<?php echo "http://".$file; ?>"></script>
 <?php endforeach; ?>
 
 
