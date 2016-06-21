@@ -67,6 +67,9 @@ class User extends CI_Controller {
 		$data['updated'] = false;
 		$user = $this->auth->get_user();
 		$password = $user->password;
+		$action = input_post("action","");	
+		$old_password = input_post("old_password","");
+		$new_password = input_post("new_password","");		
 
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
