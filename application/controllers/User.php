@@ -43,10 +43,10 @@ class User extends CI_Controller {
 			if ($this->form_validation->run() == FALSE) {
 				$data['error'] = true;
 			} else {
-				$user_post['id'] = $user['id'];
 				$user_post['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
 
-				$this->db->replace('users', $user_post);
+				$this->db->where('id', $user['id']);
+				$this->db->update('users', $user_post);
 
 			}
 		}
