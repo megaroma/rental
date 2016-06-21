@@ -2682,7 +2682,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 
 		$input .= "<div id='uploader_$unique' rel='$unique' class='grocery-crud-uploader' style='$uploader_display_none'></div>";
 		$input .= "<div id='success_$unique' class='upload-success-url' style='$file_display_none padding-top:7px;'>";
-		$input .= "<a href='".$file_url."' id='file_$unique' class='open-file";
+		$input .= "<a href='http://".$file_url."' id='file_$unique' class='open-file";
 		$input .= $is_image ? " $image_class'><img src='http://".$file_url."' height='50px'>" : "' target='_blank'>$value";
 		$input .= "</a> ";
 		$input .= "<a href='javascript:void(0)' id='delete_$unique' class='delete-anchor'>".$this->l('form_upload_delete')."</a> ";
