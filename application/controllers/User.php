@@ -21,7 +21,7 @@ class User extends CI_Controller {
 		$this->form_validation->set_rules('age', 'Age', 'required|numeric');
 		$this->form_validation->set_rules('gender', 'Gender', 'required');
 		$data = array();
-
+		$user_post = array();
 		$user_post['full_name'] = input_post("full_name","");
 		$user_post['driver_licence'] = input_post("driver_licence","");
 		$user_post['age'] = input_post("age","");
@@ -35,7 +35,11 @@ class User extends CI_Controller {
 		$user = (array) $this->auth->get_user();
 
 		if($action == "submit") {
-			$user += $user_post;
+			$user['full_name'] = $user_post['full_name'];
+			$user['driver_licence'] = $user_post['driver_licence'];
+			$user['age'] = $user_post['age'];
+			$user['gender'] = $user_post['gender'];
+
 			if ($this->form_validation->run() == FALSE) {
 				$data['error'] = true;
 			} else {
