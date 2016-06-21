@@ -38,13 +38,18 @@ class Manager extends CI_Controller {
 		$crud->set_table('cars');
 		$crud->set_crud_url_path("http://".base_url().'manager/cars');
 		$crud->set_field_upload('photo','assets/imgs/cars');
-		$crud->callback_field('photo',function ($value = '', $primary_key = null) {
-			return $value;
-		} );
+		$crud->callback_field('photo', array($this,"callback_photo") );
 
 		admin_view($this, 'crud' , $data);
 
 	}
+
+
+
+	public function callback_photo ($value = '', $primary_key = null) {
+			return $value;
+		}
+
 
 }
 
