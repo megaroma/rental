@@ -38,8 +38,19 @@ class Manager extends CI_Controller {
 		$crud->set_table('cars');
 		$crud->set_crud_url_path("http://".base_url().'manager/cars');
 		$crud->set_field_upload('photo','assets/imgs/cars');
+		$crud->callback_field('photo',function ($value = '', $primary_key = null) {
+			return $value;
+		} );
+
 		admin_view($this, 'crud' , $data);
 
 	}
 
 }
+
+
+
+/*
+
+<div class="text-left"><a href="rental.nteconlinecourses.tk/assets/imgs/cars/01-2011-bugatt-super-sport.jpg" class="image-thumbnail"><img src="rental.nteconlinecourses.tk/assets/imgs/cars/01-2011-bugatt-super-sport.jpg" height="50px"></a></div>
+*/
