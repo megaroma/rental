@@ -25,7 +25,7 @@ class Admin extends CI_Controller {
 	{
 		$data = array();
 		$data['title'] = "Car Rental - Admin page";
-
+		$this->grocery_crud->set_table('users');
 		admin_view($this, 'index' , $data);
 	}
 
