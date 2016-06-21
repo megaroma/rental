@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	public $home_url =  "http://".base_url()."admin";
+	public $home_url;
 
     public function __construct() {
  		parent::__construct();
@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
  		   ($this->auth->has_role("admin")) 
  		) {
  			
-
+ 			 $this->home_url =  "http://".base_url()."admin";
  		} else {
  			redirect("http://".base_url() , 'refresh');
  		}
