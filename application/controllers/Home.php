@@ -88,7 +88,7 @@ class Home extends CI_Controller {
 			if ($this->form_validation->run() == FALSE) {
 				$data['error'] = true;
 			} else {
-				$user['password'] = md5($user['password']);
+				//$user['password'] = md5($user['password']);
 				$user['created_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
 				$user['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
 				$user['role_id'] = "3";
