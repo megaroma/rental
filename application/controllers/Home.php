@@ -87,6 +87,11 @@ class Home extends CI_Controller {
 
 		if (($action == "submit") && ($this->form_validation->run() == FALSE)) {
 			$data['error'] = true;
+		} else {
+			$user['password'] = md5($user['password']);
+			$user['created_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
+			$this->db->insert('users', $user);
+			redirect("http://".base_url().'home/login', 'refresh');
 		}
 
 		$data += $user;
