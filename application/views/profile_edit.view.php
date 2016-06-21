@@ -10,6 +10,14 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Info:</h1>
 
+
+ <?if($error): ?>
+  <div class="alert alert-danger" role="alert">
+  	<?php echo validation_errors(); ?>	
+  </div>
+   <?php endif; ?>
+
+
 <form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>/user/profile" enctype="multipart/form-data">
 
   <div class="form-group">

@@ -12,13 +12,40 @@ class User extends CI_Controller {
  		}
     }
 
-
-
     public function profile() {
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('full_name', 'Full Name', 'required');
+		$this->form_validation->set_rules('driver_licence', 'Driver Licence', 'required');
+		$this->form_validation->set_rules('age', 'Age', 'required|numeric');
+		$this->form_validation->set_rules('gender', 'Gender', 'required');
 		$data = array();
+
+		$user_post['full_name'] = input_post("full_name","");
+		$user_post['driver_licence'] = input_post("driver_licence","");
+		$user_post['age'] = input_post("age","");
+		$user_post['gender'] = input_post("gender","");
+		$action = input_post("action","");				    	
+		$data['error'] = false;
+
+		
 		$data['title'] = "Car Rental- User Profile";
 
 		$user = (array) $this->auth->get_user();
+
+		if($action == "submit") {
+			$user += $user_post;
+			if ($this->form_validation->run() == FALSE) {
+				$data['error'] = true;
+			} else {
+				$user_post['id'] = $user['id'];
+				$user_post['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
+
+				$this->db->replace('users', $user_post);
+
+			}
+		}
 
 
 		$data += $user;
