@@ -85,7 +85,7 @@ class Home extends CI_Controller {
 		$data['error_msg'] = "";
 
 
-		if ($this->form_validation->run() == FALSE) {
+		if (($action == "submit") && ($this->form_validation->run() == FALSE)) {
 			$data['error'] = true;
 		}
 
