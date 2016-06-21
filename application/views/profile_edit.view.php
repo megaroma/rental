@@ -15,7 +15,13 @@
   <div class="alert alert-danger" role="alert">
   	<?php echo validation_errors(); ?>	
   </div>
-   <?php endif; ?>
+ <?php endif; ?>
+ <?if($updated): ?>
+  <div class="alert alert-success" role="alert">
+  		<strong>Success</strong> Your profile was updated. 
+  </div>
+ <?php endif; ?>
+
 
 
 <form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>/user/profile" enctype="multipart/form-data">

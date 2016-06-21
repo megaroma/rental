@@ -28,7 +28,7 @@ class User extends CI_Controller {
 		$user_post['gender'] = input_post("gender","");
 		$action = input_post("action","");				    	
 		$data['error'] = false;
-
+		$data['updated'] = false;
 		
 		$data['title'] = "Car Rental- User Profile";
 
@@ -47,7 +47,7 @@ class User extends CI_Controller {
 
 				$this->db->where('id', $user['id']);
 				$this->db->update('users', $user_post);
-
+				$data['updated'] = true;
 			}
 		}
 
