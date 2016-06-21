@@ -15,8 +15,10 @@ function master_view($controller, $name , $data) {
 
 function admin_view($controller, $name , $data) {
 
-	$content = $controller->load->view("admin_".$name.".view.php",$data,true);
 	$data['crud'] = $controller->grocery_crud->render();
+
+	$content = $controller->load->view("admin_".$name.".view.php",$data,true);
+
 	$data['content'] = $content;
 
 	$controller->load->view("admin_master.view.php",$data);

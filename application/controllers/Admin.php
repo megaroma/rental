@@ -30,4 +30,10 @@ class Admin extends CI_Controller {
 	}
 
 
+	public function users() {
+		$data = array();
+		$this->grocery_crud->set_table('users');
+		admin_view($this, 'users' , $data);
+	}
+
 }
