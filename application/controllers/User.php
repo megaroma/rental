@@ -10,6 +10,7 @@ class User extends CI_Controller {
  		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 		$this->load->library('email');
+		$this->load->model('cars_m');
  		if(!$this->auth->check()) {
  			redirect("http://".base_url().'home/login', 'refresh');
  		}
@@ -108,6 +109,10 @@ class User extends CI_Controller {
     public function orders() {
 		$data = array();
 		$data['title'] = "Car Rental- My Orders";
+		$user = $this->auth->get_user();
+
+
+		$data['orders'] = $this->cars_m->my_orders($user->id);
 
 		master_view($this, 'profile_orders' , $data); 
     }
