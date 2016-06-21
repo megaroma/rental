@@ -38,13 +38,22 @@ class Manager extends CI_Controller {
 		$crud->set_table('cars');
 		$crud->set_crud_url_path("http://".base_url().'manager/cars');
 		$crud->set_field_upload('photo','assets/imgs/cars');
+		$crud->callback_edit_field('status',array($this,'edit_status_callback'));
 
 		admin_view($this, 'crud' , $data);
 
 	}
 
 
-
+	public function edit_status_callback($value, $primary_key) {
+		$statuses = array("available", "hidden");
+		$output = "<select class=\"form-control\" name=\"status\">";
+		foreach($statuses as $status) {
+			$output .= "<option ".(($status == $value)? "selected" : "").">".$status."</option>";
+		}
+		$output .= "</select>";
+		return $output;
+	}
 
 
 }
