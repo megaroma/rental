@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Manager extends CI_Controller {
 
-	public $home_url =  "http://".base_url()."admin";
+	public $home_url =  "http://".base_url()."manager";
 
     public function __construct() {
  		parent::__construct();
@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
  		$this->load->database();
 		$this->load->helper('url');
  		if(($this->auth->check()) &&
- 		   ($this->auth->has_role("admin")) 
+ 			(($this->auth->has_role("admin")) || ($this->auth->has_role("staff")))
  		) {
  			
 
@@ -25,7 +25,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$data = array();
-		$data['title'] = "Car Rental - Admin page";
+		$data['title'] = "Car Rental - Manager page";
 		$this->grocery_crud->set_table('users');
 		admin_view($this, 'index' , $data);
 	}

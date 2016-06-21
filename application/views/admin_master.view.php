@@ -93,17 +93,26 @@ foreach($crud->css_files as $file): ?>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://<?php echo base_url(); ?>admin">Admin</a>
+            <a class="navbar-brand" href="<?php echo $this->home_url; ?>">Admin</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="http://<?php echo base_url(); ?>admin">Home</a></li>
+              <li><a href="<?php echo $this->home_url; ?>">Home</a></li>
 
               <li class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="http://<?php echo base_url(); ?>admin/users">Users</a></li>
                   <li><a href="http://<?php echo base_url(); ?>admin/roles">Roles</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <li class="dropdown" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manager <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="http://<?php echo base_url(); ?>manager/cars">Cars</a></li>
+                  <li><a href="http://<?php echo base_url(); ?>manager/orders">Orders</a></li>
                 </ul>
               </li>
             </ul>
