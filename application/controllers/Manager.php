@@ -31,26 +31,12 @@ class Manager extends CI_Controller {
 	}
 
 
-	public function users() {
-		$data = array();
-		$this->grocery_crud->set_table('users');
-		//$this->grocery_crud->set_theme('datatables');
-		$this->grocery_crud->set_subject("User");
-		$this->grocery_crud->set_crud_url_path("http://".base_url().'admin/users');
-		$this->grocery_crud->columns("full_name","role_id","age","driver_licence","gender","email","active");
-		$this->grocery_crud->set_relation('role_id','roles','name');
-		admin_view($this, 'crud' , $data);
-	}
-
 
 	public function roles() {
 		$data = array();
 		$crud = $this->grocery_crud;
-		$crud->set_table('roles');
-		$crud->set_crud_url_path("http://".base_url().'admin/roles');
-		$crud->unset_add();
-		$crud->unset_edit();		
-		$crud->unset_delete();
+		$crud->set_table('cars');
+		$crud->set_crud_url_path("http://".base_url().'manager/cars');
 		admin_view($this, 'crud' , $data);
 
 	}
