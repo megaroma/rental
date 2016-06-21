@@ -34,9 +34,9 @@ class Admin extends CI_Controller {
 		$data = array();
 		$this->grocery_crud->set_table('users');
 		$this->grocery_crud->set_theme('datatables');
-		$this->grocery_crud->set_subject("Manage Users");
+		$this->grocery_crud->set_subject("User");
 		$this->grocery_crud->set_crud_url_path("http://".base_url().'admin/users');
-		$this->grocery_crud->columns("full_name","role_id","age","driver_licence","gender","email","active");
+		//$this->grocery_crud->columns("full_name","role_id","age","driver_licence","gender","email","active");
 		$this->grocery_crud->set_relation('role_id','roles','name');
 		admin_view($this, 'users' , $data);
 	}
