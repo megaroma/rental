@@ -341,7 +341,7 @@ class grocery_CRUD_Field_Types
 							|| substr($value,-5) == '.tiff')
 							? true : false;
 
-					$file_url = base_url().$field_info->extras->upload_path."/$value";
+					$file_url = "http://".base_url().$field_info->extras->upload_path."/$value";
 
 					$file_url_anchor = '<a href="'.$file_url.'"';
 					if($is_image)
