@@ -19,7 +19,14 @@ class Auth {
         	$this->CI->load->database();
                 if(isset($this->CI->session->user_logged) && ($this->CI->session->user_logged))
                 {
-                        $this->user = $this->CI->session->user;
+                        $session_user = $this->CI->session->user;
+                        $sql = "select * from users where email = ? ";
+                        $query = $this->CI->db->query($sql,array($session_user->email));
+                        $result = $query->result();
+                        $user = $result[0];
+
+                        $this->user = $user;
+                        $this->CI->session->user = $user;
                 } else {
                         $this->CI->session->user_logged = false;
                         $this->CI->session->user = array();
