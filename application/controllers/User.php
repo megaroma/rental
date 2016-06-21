@@ -80,7 +80,12 @@ class User extends CI_Controller {
 			if ($this->form_validation->run() == FALSE) {
 				$data['error'] = true;
 			} else {
+				$new_data['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
+				$new_data['password'] = $new_password;
 
+				$this->db->where('id', $user->id);
+				$this->db->update('users', $new_data);
+				
 				$data['updated'] = true;
 			}			
 		}
