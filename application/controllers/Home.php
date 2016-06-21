@@ -76,7 +76,7 @@ class Home extends CI_Controller {
 
 		$user['full_name'] = input_post("full_name","");
 		$user['email'] = input_post("email","");
-		$user['password'] = input_post("pasword","");
+		$user['password'] = trim(input_post("pasword",""));
 		$user['driver_licence'] = input_post("driver_licence","");
 		$user['age'] = input_post("age","");
 		$user['gender'] = input_post("gender","");
@@ -90,6 +90,7 @@ class Home extends CI_Controller {
 			} else {
 				$user['password'] = md5($user['password']);
 				$user['created_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
+				$user['updated_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
 				$user['role_id'] = "3";
 				$user['active'] = "1";
 				$this->db->insert('users', $user);
