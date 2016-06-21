@@ -59,8 +59,20 @@ class Home extends CI_Controller {
 	}
 
 	public function register() {
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('full_name', 'Full Name', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
+		$this->form_validation->set_rules('driver_licence', 'Driver Licence', 'required');
+		$this->form_validation->set_rules('age', 'Age', 'required|numeric');
+		$this->form_validation->set_rules('gender', 'Gender', 'required');
+
 		$data = array();
 		$data['title'] = "Car Rental - register page";
+
 
 		$user['full_name'] = input_post("full_name","");
 		$user['email'] = input_post("email","");
@@ -72,6 +84,10 @@ class Home extends CI_Controller {
 		$data['error'] = false;
 		$data['error_msg'] = "";
 
+
+		if ($this->form_validation->run() == FALSE) {
+			$data['error'] = true;
+		}
 
 		$data += $user;
 

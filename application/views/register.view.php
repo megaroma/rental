@@ -2,7 +2,7 @@
 
   <?if($error): ?>
   <div class="alert alert-danger" role="alert">
-  	<?php echo $error_msg; ?>	
+  	<?php echo validation_errors(); ?>	
   </div>
    <?php endif; ?>
 
@@ -26,6 +26,13 @@
     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
     <div class="col-sm-10">
       <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword4" class="col-sm-2 control-label">Password Confirmation</label>
+    <div class="col-sm-10">
+      <input type="password" name="passconf" class="form-control" id="inputPassword4" placeholder="Password Confirmation">
     </div>
   </div>
 
