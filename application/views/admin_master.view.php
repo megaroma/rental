@@ -102,8 +102,8 @@ foreach($crud->css_files as $file): ?>
               <li class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="">Users</a></li>
-                  <li><a href="">Roles</a></li>
+                  <li><a href="http://<?php echo base_url(); ?>admin/users">Users</a></li>
+                  <li><a href="http://<?php echo base_url(); ?>admin/roles">Roles</a></li>
                 </ul>
               </li>
             </ul>
