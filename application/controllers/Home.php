@@ -61,6 +61,20 @@ class Home extends CI_Controller {
 	public function register() {
 		$data = array();
 		$data['title'] = "Car Rental - register page";
+
+		$user['full_name'] = input_post("full_name","");
+		$user['email'] = input_post("email","");
+		$user['password'] = input_post("pasword","");
+		$user['driver_licence'] = input_post("driver_licence","");
+		$user['age'] = input_post("age","");
+		$user['gender'] = input_post("gender","");
+		$action = input_post("action","");
+		$data['error'] = false;
+		$data['error_msg'] = "";
+
+
+		$data += $user;
+
 		master_view($this, 'register' , $data);		
 	}
 
