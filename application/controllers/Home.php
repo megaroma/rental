@@ -84,16 +84,17 @@ class Home extends CI_Controller {
 		$data['error'] = false;
 		$data['error_msg'] = "";
 
-
-		if (($action == "submit") && ($this->form_validation->run() == FALSE)) {
-			$data['error'] = true;
-		} else {
-			$user['password'] = md5($user['password']);
-			$user['created_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
-			$user['role_id'] = "3";
-			$user['active'] = "1";
-			$this->db->insert('users', $user);
-			redirect("http://".base_url().'home/login', 'refresh');
+		if($action == "submit") {
+			if ($this->form_validation->run() == FALSE) {
+				$data['error'] = true;
+			} else {
+				$user['password'] = md5($user['password']);
+				$user['created_at'] = date("Y-m-d H:i:s",strtotime("NOW"));
+				$user['role_id'] = "3";
+				$user['active'] = "1";
+				$this->db->insert('users', $user);
+				redirect("http://".base_url().'home/login', 'refresh');
+			}
 		}
 
 		$data += $user;
