@@ -99,6 +99,7 @@ foreach($crud->css_files as $file): ?>
             <ul class="nav navbar-nav">
               <li><a href="<?php echo $this->home_url; ?>">Home</a></li>
 
+              <?php if($this->auth->has_role("admin")): ?>
               <li class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -106,6 +107,7 @@ foreach($crud->css_files as $file): ?>
                   <li><a href="http://<?php echo base_url(); ?>admin/roles">Roles</a></li>
                 </ul>
               </li>
+            <?php endif; ?>
  
             <li class="dropdown" >
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manager <span class="caret"></span></a>
