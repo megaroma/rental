@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
  			
 
  		} else {
- 			redirect("http://".base_url().'home/login', 'refresh');
+ 			redirect("http://".base_url() , 'refresh');
  		}
     }
 

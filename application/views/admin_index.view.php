@@ -1,1 +1,1 @@
-Booo
+<p>Booo</p>
