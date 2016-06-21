@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
     public function __construct() {
  		parent::__construct();
  		$this->load->library('auth');
+ 		$this->load->library('grocery_CRUD');  
  		if(($this->auth->check()) &&
  			(($this->auth->has_role("admin")) || ($this->auth->has_role("staff")))
  		) {
