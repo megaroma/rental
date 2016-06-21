@@ -27,7 +27,7 @@
 
 
 
-<form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>/home/register" enctype="multipart/form-data">
+<form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>/user/password" enctype="multipart/form-data">
 
   <div class="form-group">
     <label for="inputPassword2" class="col-sm-2 control-label">Current Password</label>
