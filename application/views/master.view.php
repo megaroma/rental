@@ -25,8 +25,9 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet">
     <!-- FancyBox -->
 	<link href="<?php echo asset_url('/css/fancybox/jquery.fancybox.css');?>" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/css/style.css');?>">
-    <link rel="stylesheet" href="<?php echo asset_url('/css/animate.min.css');?>">
+    <link rel="stylesheet" href="<?php echo asset_url('css/style.css');?>">
+    <link rel="stylesheet" href="<?php echo asset_url('css/animate.min.css');?>">
+    <link rel="stylesheet" href="<?php echo asset_url("grocery_crud/css/ui/simple/jquery-ui-1.10.1.custom.min.css");?>">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -169,6 +170,7 @@
     <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/ui/jquery-ui-1.10.3.custom.min.js');?>"></script>
 	<script type="text/javascript">
     $(document).ready(function () {
+      $( ".datepicker-input" ).datepicker();
 		$('#da-slider').cslider({
 			autoplay: true,
 			bgincrement: 0

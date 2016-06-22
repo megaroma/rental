@@ -55,5 +55,5 @@
 </div>
     <script>
 
-           $( ".datepicker-input" ).datepicker();
+           
     </script>
