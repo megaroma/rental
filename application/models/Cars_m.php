@@ -24,8 +24,8 @@ class Cars_m extends CI_Model {
         }
 
         public function save_order($car_id,$fd,$td,$comment) {
-                $fd = date("Y-m-d",strtotime($from));   
-                $td = date("Y-m-d",strtotime($till));   
+                $fd = date("Y-m-d",strtotime($fd));   
+                $td = date("Y-m-d",strtotime($td));   
                 $user = $this->auth->get_user();
 
                 $data = array(
