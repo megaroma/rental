@@ -152,19 +152,18 @@
 	
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo asset_url('js/ie10-viewport-bug-workaround.js');?>"></script>
-	<script src="assets/js/modernizr-latest.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.cslider.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-	<script src="assets/js/jquery.fancybox.pack.js"></script>  
-	<script src="assets/js/jquery.fancybox-media.js"></script>  
-    <script src="assets/js/imagesloaded.min.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nav.min.js"></script>
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <script src="assets/js/twitterFetcher.min.js"></script>
+	<script src="<?php echo asset_url('js/modernizr-latest.js');?>"></script>
+	<script src="<?php echo asset_url('js/jquery.cslider.js');?>"></script>
+    <script src="<?php echo asset_url('js/isotope.pkgd.min.js');?>"></script>
+	<script src="<?php echo asset_url('js/jquery.fancybox.pack.js');?>"></script>  
+	<script src="<?php echo asset_url('js/jquery.fancybox-media.js');?>"></script>  
+    <script src="<?php echo asset_url('js/imagesloaded.min.js');?>"></script>
+    <script src="<?php echo asset_url('js/jquery.scrollTo.min.js');?>"></script>
+    <script src="<?php echo asset_url('js/jquery.nav.min.js');?>"></script>
+    <script src="<?php echo asset_url('js/jquery.appear.min.js');?>"></script>
+    <script src="<?php echo asset_url('js/twitterFetcher.min.js');?>"></script>
 	<script src="contact/jqBootstrapValidation.js"></script>
-    <script src="assets/js/script.js"></script> 
+    <script src="<?php echo asset_url('js/script.js');?>"></script> 
     <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/jquery.form.min.js');?>"></script>
     <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/ui/jquery-ui-1.10.3.custom.min.js');?>"></script>
 	<script type="text/javascript">
