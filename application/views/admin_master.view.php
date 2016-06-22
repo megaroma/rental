@@ -77,7 +77,9 @@ foreach($crud->css_files as $file): ?>
 
     <script>
       $( document ).ready(function() {
-
+                $('.datepicker').datetimepicker({
+                    pickTime: false
+                });
       });
     </script>
   </head>
