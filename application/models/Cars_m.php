@@ -16,7 +16,7 @@ class Cars_m extends CI_Model {
         	return $result;
         }
 
-        public get_user_by_email($email) {
+        public function get_user_by_email($email) {
                 $sql = "select * from users where email = ? ";
                 $query = $this->db->query($sql,array($email));
                 $result = $query->result();
