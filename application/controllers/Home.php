@@ -27,6 +27,8 @@ class Home extends CI_Controller {
 		if($action != "") {
 
 			$data += $contact;
+		} else {
+			$data += $contact;
 		}
 
 
