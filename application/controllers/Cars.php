@@ -19,5 +19,8 @@ class Cars extends CI_Controller {
 		master_view($this, 'cars' , $data);
 	}
 
+	public function open($id) {
+		echo $id;
+	}
 
 }

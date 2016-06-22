@@ -16,7 +16,7 @@
 				<li>Seats: <b><?php echo $car->seats; ?></b></li>
 				<li>Price: <b><?php echo $car->price; ?></b></li>
 			</ul>
-			<a class="btn btn-large car_button" href="#"><span>Details</span></a>
+			<a class="btn btn-large car_button" href="http://<?php echo base_url()."cars/open/".$car->id; ?>"><span>Details</span></a>
 		</p>
 		</div>
 		<?php 
