@@ -59,6 +59,7 @@ class Manager extends CI_Controller {
 	}
 
 	public function reports() {
+		$this->load->model('report');
 		$data = array();
 		$this->grocery_crud->set_table('roles');
 		$data['report'] = input_post("report","");
@@ -73,6 +74,7 @@ class Manager extends CI_Controller {
 
 			if($data['report'] == "Orders") {
 				$data['report_sent'] = true;
+				$data['report_body'] = $this->report->orders($data['dt_from'],$data['dt_till']);
 			}
 
 
