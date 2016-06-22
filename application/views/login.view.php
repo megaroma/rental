@@ -18,7 +18,7 @@
             <input type="checkbox" name="remember" value="remember-me"> Remember me
           </label>
         </div>
-		<a href="http://<?php echo base_url(); ?>#">Forget Password?</a>
+		<a href="http://<?php echo base_url(); ?>home/faggot">Forget Password?</a>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 	</div>

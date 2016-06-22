@@ -11,6 +11,8 @@ class Home extends CI_Controller {
     }
 
 
+
+
 	public function index()
 	{
 		$this->load->helper(array('form', 'url'));
@@ -147,6 +149,16 @@ class Home extends CI_Controller {
 		$data += $user;
 
 		master_view($this, 'register' , $data);		
+	}
+
+
+
+	public function faggot() {
+		$data = array();
+		$data['title'] = "Car Rental - forgot password?";
+
+
+		master_view($this, 'forgot' , $data);	
 	}
 
 
