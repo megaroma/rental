@@ -18,6 +18,7 @@
     </style>
     <script src="<?php echo asset_url('js/ie-emulation-modes-warning.js');?>"></script>
     <script src="<?php echo asset_url('js/jquery-1.11.2.min.js');?>"></script>
+    <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/jquery.form.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap-formhelpers.min.js');?>"></script>
 	
