@@ -38,6 +38,12 @@ class Admin extends CI_Controller {
 		$this->grocery_crud->set_subject("User");
 		$this->grocery_crud->set_crud_url_path("http://".base_url().'admin/users');
 		$this->grocery_crud->columns("full_name","role_id","age","driver_licence","gender","email","active");
+		$this->grocery_crud->fields("full_name","role_id","age","driver_licence","gender","email","active","password");
+		$this->grocery_crud->callback_edit_field('password',array($this,'set_password_input_to_empty'));
+		$this->grocery_crud->callback_add_field('password',array($this,'set_password_input_to_empty'));
+ 
+		$this->grocery_crud->callback_update(array($this,'encrypt_password_and_update'));
+
 		$this->grocery_crud->set_relation('role_id','roles','name');
 		admin_view($this, 'crud' , $data);
 	}
@@ -54,5 +60,26 @@ class Admin extends CI_Controller {
 		admin_view($this, 'crud' , $data);
 
 	}
+
+	//callbacks
+
+public function encrypt_password_and_update($post_array, $primary_key) {
+ 
+if(!empty($post_array['password']))
+{
+
+$post_array['password'] = md5($post_array['password']);
+}
+else
+{
+unset($post_array['password']);
+}
+ 
+return $this->db->update('users',$post_array,array('id' => $primary_key));
+}
+ 
+public function set_password_input_to_empty() {
+return "<input type='password' class='form-control' name='password' value='' />";
+}
 
 }
