@@ -49,7 +49,7 @@ class Manager extends CI_Controller {
 		$crud = $this->grocery_crud;
 		$crud->set_table('orders');		
 		$crud->set_crud_url_path("http://".base_url().'manager/orders');
-		$crud->set_relation('user_id','users','fullname');
+		$crud->set_relation('user_id','users','full_name');
 		$crud->set_relation('status_id','statuses','name');
 		$crud->set_relation('car_id','roles','{brand} {model}');
 
