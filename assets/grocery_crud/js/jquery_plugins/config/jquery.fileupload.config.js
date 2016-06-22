@@ -88,7 +88,7 @@ $(function(){
 		            	{
 		            		$('#file_'+unique_id).addClass('image-thumbnail');
 		            		load_fancybox($('#file_'+unique_id));
-		            		$('#file_'+unique_id).html('<img src="'+file.url+'" height="50" />');
+		            		$('#file_'+unique_id).html('<img src="http://'+file.url+'" height="50" />');
 		            	}
 		            	else
 		            	{
