@@ -12,6 +12,7 @@
     <link href="<?php echo asset_url('css/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?php echo asset_url('css/ie10-viewport-bug-workaround.css');?>" rel="stylesheet">
     <link href="<?php echo asset_url('css/font-awesome.min.css');?>" rel="stylesheet">
+    <link href="<?php echo asset_url('css/bootstrap-datetimepicker.min.css');?>" rel="stylesheet">
     <link media="all" type="text/css" rel="stylesheet" href="<?php echo asset_url('css/bootstrap-formhelpers.min.css');?>">
     <style type="text/css">
 
@@ -19,6 +20,7 @@
     <script src="<?php echo asset_url('js/ie-emulation-modes-warning.js');?>"></script>
     <script src="<?php echo asset_url('js/jquery-1.11.2.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap.min.js');?>"></script>
+    <script src="<?php echo asset_url('js/bootstrap-datetimepicker.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap-formhelpers.min.js');?>"></script>
 	
   <?php 
