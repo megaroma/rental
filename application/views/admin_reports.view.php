@@ -6,9 +6,9 @@
 			<div class="form-group">
 				<label for="inputReport" class="col-sm-2 col-sm-offset-1 control-label">Report:</label>
 				<div class="col-sm-6">
-		   			<select class="form-control">
+		   			<select class="form-control" name="report">
   						<option>--Select Report--</option>
-  						<option>Orders</option>
+  						<option <?php echo ($report == "Orders")? "selected" : ""; ?> >Orders</option>
  					 </select>
 				</div>
 	  		</div>
@@ -16,14 +16,14 @@
 			<div class="form-group">
 				<label for="inputFromDT" class="col-sm-2 col-sm-offset-1 control-label">From:</label>
 				<div class="col-sm-6">
-				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_from" value=""/>
+				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_from" value="<?php echo $dt_from; ?>"/>
 				</div>
 	  		</div>
 
 			<div class="form-group">
 				<label for="inputTillDT" class="col-sm-2 col-sm-offset-1 control-label">Till:</label>
 				<div class="col-sm-6">
-				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_till" value=""/>
+				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_till" value="<?php echo $dt_till; ?>"/>
 				</div>
 	  		</div>
 
