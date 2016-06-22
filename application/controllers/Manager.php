@@ -61,7 +61,7 @@ class Manager extends CI_Controller {
 	public function reports() {
 		$data = array();
 		$this->grocery_crud->set_table('roles');
-		$dara['report'] = input_post("report","");
+		$data['report'] = input_post("report","");
 		$data['dt_from'] = input_post("dt_from","");
 		$data['dt_till'] = input_post("dt_till","");
 
