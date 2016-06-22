@@ -1,7 +1,7 @@
 <div class="container">
 <h1>Car Detail</h1>
 
-<img src="assets/imgs/cars/<?php echo $car->photo; ?>">
+<img src="http://<?php echo base_url();?>assets/imgs/cars/<?php echo $car->photo; ?>">
 
 			<ul>
 				<li>Brand: <b><?php echo $car->brand; ?></b></li>
