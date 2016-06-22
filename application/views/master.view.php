@@ -18,7 +18,7 @@
     </style>
     <script src="<?php echo asset_url('js/ie-emulation-modes-warning.js');?>"></script>
     <script src="<?php echo asset_url('js/jquery-1.11.2.min.js');?>"></script>
-    <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/jquery.form.min.js');?>"></script>
+
     <script src="<?php echo asset_url('js/bootstrap.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap-formhelpers.min.js');?>"></script>
 	
@@ -152,7 +152,6 @@
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo asset_url('js/ie10-viewport-bug-workaround.js');?>"></script>
 	<script src="assets/js/modernizr-latest.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.cslider.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
@@ -166,6 +165,7 @@
 	<script src="contact/jqBootstrapValidation.js"></script>
 	<script src="contact/contact_me.js"></script>
     <script src="assets/js/script.js"></script> 
+    <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/jquery.form.min.js');?>"></script>
 	<script type="text/javascript">
     $(document).ready(function () {
 		$('#da-slider').cslider({
