@@ -97,7 +97,7 @@ $(function(){
 		            		$('#file_'+unique_id).html(file_name);
 		            	}
 		            	
-						$('#file_'+unique_id).attr('href',file.url);
+						$('#file_'+unique_id).attr('href',"http://"+file.url);
 						$('#hidden_'+unique_id).val(file_name);
 
 						$('#success_'+unique_id).fadeIn('slow');
