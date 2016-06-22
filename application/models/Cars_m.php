@@ -15,6 +15,12 @@ class Cars_m extends CI_Model {
         	return $result;
         }
 
+        public function get_car($id) {
+                $sql = "select * from cars where id = ? ";
+                $query = $this->db->query($sql,array($id));
+                $result = $query->result();
+                return $result[0];                
+        }
 
         public function my_orders($user_id) {
                 $sql = "select

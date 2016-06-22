@@ -20,7 +20,11 @@ class Cars extends CI_Controller {
 	}
 
 	public function open($id) {
-		echo $id;
+		$data = array();
+		$data['title'] = "Car Rental";
+		$data['car'] = $this->cars_m->get_car($id);
+		master_view($this, 'car' , $data);
+
 	}
 
 }
