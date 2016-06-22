@@ -72,7 +72,7 @@
                <div class="row">
             <span id="message"></span><!-- remove #message to stop floating jQuery messages -->
             
-            <form  name="contact" method="post" action="http://<?php echo base_url(); ?>#contact">
+            <form id="contact_form" name="contact" method="post" action="http://<?php echo base_url(); ?>#contact">
                 <div class="col-lg-5 anim fadeInLeft animated" style="visibility: visible;">
                 
                     <span class="input-group">
@@ -99,7 +99,7 @@
                     </span><!-- .input-group -->
                     <input type="hidden" name="action" value="send">
                     <span class="input-group">
-                    	<button class="submit" type="submit" id="submit_contact" data-loading-text="SENDING...">SEND</button>
+                    	<button class="submit" type="submit" onclick="$('#contact_form').submit();" data-loading-text="SENDING...">SEND</button>
                     </span><!-- .input-group -->
                 </div>
             </form>
