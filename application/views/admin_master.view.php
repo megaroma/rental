@@ -20,7 +20,7 @@
     <script src="<?php echo asset_url('js/ie-emulation-modes-warning.js');?>"></script>
     <script src="<?php echo asset_url('js/jquery-1.11.2.min.js');?>"></script>
     <script src="<?php echo asset_url('js/bootstrap.min.js');?>"></script>
-    <script src="<?php echo asset_url('js/bootstrap-datetimepicker.min.js');?>"></script>
+    
     <script src="<?php echo asset_url('js/bootstrap-formhelpers.min.js');?>"></script>
 	
   <?php 
@@ -33,7 +33,7 @@ foreach($crud->css_files as $file): ?>
     <script src="<?php echo "http://".$file; ?>"></script>
 <?php endforeach; ?>
 
-
+<script src="<?php echo asset_url('js/bootstrap-datetimepicker.min.js');?>"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
