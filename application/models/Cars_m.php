@@ -16,6 +16,13 @@ class Cars_m extends CI_Model {
         	return $result;
         }
 
+        public get_user_by_email($email) {
+                $sql = "select * from users where email = ? ";
+                $query = $this->db->query($sql,array($email));
+                $result = $query->result();
+                return $result;               
+        }
+
         public function get_car($id) {
                 $sql = "select * from cars where id = ? ";
                 $query = $this->db->query($sql,array($id));

@@ -8,6 +8,7 @@ class Home extends CI_Controller {
  		parent::__construct();
  		$this->load->library('auth');
  		$this->load->library('email');
+ 		$this->load->model('cars_m');
     }
 
 
@@ -157,6 +158,31 @@ class Home extends CI_Controller {
 		$data = array();
 		$data['title'] = "Car Rental - forgot password?";
 		$data['email'] = input_post("email","");
+		$data['message'] = "";
+		$data['error'] = "";
+
+		if($data['email'] != "") {
+			$res = $this->cars_m->get_user_by_email($data['email']);
+			if(count($res) > 0) {
+				$user_id = $res[0]->id;
+				$pwd = bin2hex(openssl_random_pseudo_bytes(4));
+
+				$this->db->where('id', $user_id);
+				$this->db->update('users', array("password" => md5($pwd)));
+
+				$this->email->from('no_reply@rental.nteconlinecourses.tk', 'NTEC Rental Car');
+				$this->email->to($data['email']);
+				$this->email->subject('Your Password has been changed');
+				$this->email->message('Your new password: '.$pwd);
+				$this->email->send();
+				$data['message'] = "Your Password has been changed. Check you email ".$data['email'];
+
+			} else {
+				$data['error'] = "Account is not found!";
+			}
+
+
+		}
 
 		master_view($this, 'forgot' , $data);	
 	}
