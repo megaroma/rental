@@ -34,7 +34,7 @@ class Cars_m extends CI_Model {
                         'status_id' => 1,
                         'start_rent_time' => $fd,
                         'end_rent_time' => $td,
-                        'comment' => $comment
+                        'comment' => $comment,
                         'dt' => date("Y-m-d H:i:s",strtotime("NOW"))
                         );
                 $this->db->insert('orders', $data);
