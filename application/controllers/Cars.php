@@ -23,8 +23,12 @@ class Cars extends CI_Controller {
 		$data = array();
 		$data['title'] = "Car Rental";
 		$data['car'] = $this->cars_m->get_car($id);
+		$data['request_form'] = true;
 		master_view($this, 'car' , $data);
 
 	}
+
+
+
 
 }
