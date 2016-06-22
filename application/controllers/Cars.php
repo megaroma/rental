@@ -27,6 +27,9 @@ class Cars extends CI_Controller {
 		$action = input_post("action","");
 
 		if($action == "request") {
+ 			if(!$this->auth->check()) {
+ 				redirect("http://".base_url().'home/login', 'refresh');
+ 			}			
 
 			$fd = input_post("dt_from","");
 			$td = input_post("dt_till","");
