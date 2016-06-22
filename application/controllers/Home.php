@@ -156,7 +156,7 @@ class Home extends CI_Controller {
 	public function faggot() {
 		$data = array();
 		$data['title'] = "Car Rental - forgot password?";
-
+		$data['email'] = input_post("email","");
 
 		master_view($this, 'forgot' , $data);	
 	}
