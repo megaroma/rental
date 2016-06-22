@@ -17,7 +17,7 @@ class Report extends CI_Model {
                                 (select count(*) from orders o where o.status_id = s.id) as `total`
                         from statuses s 
                         where 
-                                o.dt brtween ? and ?
+                                o.dt between ? and ?
                 ";
                 $query = $this->db->query($sql,array($fd,$td));
                 $result = $query->result();
