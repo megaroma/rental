@@ -49,7 +49,7 @@
 	  		</div>
 	  	</form>
 
-<?php else; ?>
+<?php else: ?>
 	<div class="alert alert-success" role="alert">You have requested a car. Please wait until a manager approves your request.</div>
 <?php endif; ?>
 
