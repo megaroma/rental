@@ -24,6 +24,24 @@ class Cars extends CI_Controller {
 		$data['title'] = "Car Rental";
 		$data['car'] = $this->cars_m->get_car($id);
 		$data['request_form'] = true;
+		$action = input_post("action","");
+
+		if($action == "request") {
+
+			$fd = input_post("dt_from","");
+			$td = input_post("dt_till","");
+			$comment = input_post("comment","");
+
+			if(($fd != "") && ($td != "")) {
+				$this->cars_m->save_order($id,$fd,$td,$comment);
+				$data['request_form'] = false;
+			}
+
+
+		}
+
+
+
 		master_view($this, 'car' , $data);
 
 	}

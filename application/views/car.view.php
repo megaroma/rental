@@ -22,14 +22,14 @@
 			<div class="form-group">
 				<label for="inputFromDT" class="col-sm-2 col-sm-offset-1 control-label">From:</label>
 				<div class="col-sm-6">
-				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_from" />
+				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_from" required />
 				</div>
 	  		</div>
 
 			<div class="form-group">
 				<label for="inputTillDT" class="col-sm-2 col-sm-offset-1 control-label">Till:</label>
 				<div class="col-sm-6">
-				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_till" />
+				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_till" required  />
 				</div>
 	  		</div>
 
@@ -49,6 +49,8 @@
 	  		</div>
 	  	</form>
 
+<?php else; ?>
+	<div class="alert alert-success" role="alert">You have requested a car. Please wait until a manager approves your request.</div>
 <?php endif; ?>
 
 
