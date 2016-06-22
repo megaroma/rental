@@ -14,6 +14,23 @@ class Home extends CI_Controller {
 	{
 		$data = array();
 		$data['title'] = "Car Rental";
+		$data['error'] = false;
+		$data['sent'] = false;
+
+		$contact['contactName'] = input_post("contactName","");
+		$contact['contactEmail'] = input_post("contactEmail","");
+		$contact['contactSubject'] = input_post("contactSubject","");
+		$contact['contactMessage'] = input_post("contactMessage","");
+
+		$action = input_post("action","");
+
+		if($action != "") {
+
+			$data += $contact;
+		}
+
+
+
 		master_view($this, 'index' , $data);
 	}
 

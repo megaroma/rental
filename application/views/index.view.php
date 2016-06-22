@@ -51,6 +51,18 @@
 	</div>
 </section>
 <a name="contact"></a>
+<?if($error): ?>
+  <div class="alert alert-danger" role="alert">
+    <?php echo validation_errors(); ?>  
+  </div>
+ <?php endif; ?>
+ <?if($sent): ?>
+  <div class="alert alert-success" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Success</strong> Your password was changed. 
+  </div>
+ <?php endif; ?>
+
 <section id="contact" class="content-section form contact light space">
     	<div class="container">
         	  <div class="content cover text-center">
@@ -60,22 +72,22 @@
                <div class="row">
             <span id="message"></span><!-- remove #message to stop floating jQuery messages -->
             
-            <form target="#" name="contact">
+            <form  name="contact" method="post" action="http://<?php echo base_url(); ?>#contact">
                 <div class="col-lg-5 anim fadeInLeft animated" style="visibility: visible;">
                 
                     <span class="input-group">
                         <i class="fa fa-user"></i>
-                        <input type="text" name="contactName" id="contactName" class="lg" placeholder="Name">
+                        <input type="text" name="contactName" value="<?php echo $contactName;?>" id="contactName" class="lg" placeholder="Name">
                     </span><!-- .input-group -->
                     
                     <span class="input-group">
                         <i class="fa fa-envelope"></i>
-                        <input type="text" name="contactEmail" id="contactAddress" class="lg" placeholder="Email Address">
+                        <input type="text" name="contactEmail" value="<?php echo $contactEmail;?>" id="contactAddress" class="lg" placeholder="Email Address">
                     </span><!-- .input-group -->
                     
                    	<span class="input-group">
                         <i class="fa fa-book"></i>
-                        <input type="text" name="contactSubject" id="contactSubject" class="lg" placeholder="Subject">
+                        <input type="text" name="contactSubject" value="<?php echo $contactSubject;?>" id="contactSubject" class="lg" placeholder="Subject">
                     </span><!-- .input-group -->
                     
                 </div><!-- .col-5 -->
@@ -83,9 +95,9 @@
                 <div class="col-lg-7 anim fadeInRight animated" style="visibility: visible;">
                 
                  	<span class="input-group">
-                        <textarea name="contactMessage" id="contactMessage" class="lg" placeholder="What's on your mind?"></textarea>
+                        <textarea name="contactMessage" id="contactMessage" class="lg" placeholder="What's on your mind?"><?php echo $contactMessage;?></textarea>
                     </span><!-- .input-group -->
-                    
+                    <input type="hidden" name="action" value="send">
                     <span class="input-group">
                     	<button class="submit" id="submit_contact" data-loading-text="SENDING...">SEND</button>
                     </span><!-- .input-group -->
