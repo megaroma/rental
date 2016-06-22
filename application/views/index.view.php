@@ -99,7 +99,7 @@
                     </span><!-- .input-group -->
                     <input type="hidden" name="action" value="send">
                     <span class="input-group">
-                    	<button class="submit" id="submit_contact" data-loading-text="SENDING...">SEND</button>
+                    	<button class="submit" type="submit" id="submit_contact" data-loading-text="SENDING...">SEND</button>
                     </span><!-- .input-group -->
                 </div>
             </form>
