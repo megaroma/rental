@@ -66,7 +66,7 @@
                 <a href="http://<?php echo base_url(); ?>cars" class="external">Cars</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="http://<?php echo base_url(); ?>#contact" class="external">Contact</a>
               </li>
 			  <li>
                 <a href="#"></a>

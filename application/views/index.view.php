@@ -50,7 +50,7 @@
 		</div>       
 	</div>
 </section>
-
+<a name="contact"></a>
 <section id="contact" class="content-section form contact light space">
     	<div class="container">
         	  <div class="content cover text-center">
