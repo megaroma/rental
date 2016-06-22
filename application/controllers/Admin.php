@@ -39,6 +39,7 @@ class Admin extends CI_Controller {
 		$this->grocery_crud->set_crud_url_path("http://".base_url().'admin/users');
 		$this->grocery_crud->columns("full_name","role_id","age","driver_licence","gender","email","active");
 		$this->grocery_crud->fields("full_name","role_id","age","driver_licence","gender","email","active","password");
+		$this->grocery_crud->required_fields("full_name","role_id","age","driver_licence","gender","email","active");
 		$this->grocery_crud->callback_edit_field('password',array($this,'set_password_input_to_empty'));
 		$this->grocery_crud->callback_add_field('password',array($this,'set_password_input_to_empty'));
  

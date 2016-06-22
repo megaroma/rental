@@ -114,6 +114,7 @@ foreach($crud->css_files as $file): ?>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="http://<?php echo base_url(); ?>manager/cars">Cars</a></li>
                   <li><a href="http://<?php echo base_url(); ?>manager/orders">Orders</a></li>
+                  <li><a href="http://<?php echo base_url(); ?>manager/reports">Reports</a></li>
                 </ul>
               </li>
             </ul>

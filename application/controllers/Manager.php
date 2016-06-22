@@ -58,6 +58,11 @@ class Manager extends CI_Controller {
 
 	}
 
+	public function reports() {
+		$data = array();
+
+		admin_view($this, 'reports' , $data);
+	}
 
 //call backs
 
