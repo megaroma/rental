@@ -7,11 +7,15 @@ class Home extends CI_Controller {
     public function __construct() {
  		parent::__construct();
  		$this->load->library('auth');
+ 		$this->load->library('email');
     }
 
 
 	public function index()
 	{
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+
 		$data = array();
 		$data['title'] = "Car Rental";
 		$data['error'] = false;
@@ -22,11 +26,34 @@ class Home extends CI_Controller {
 		$contact['contactSubject'] = input_post("contactSubject","");
 		$contact['contactMessage'] = input_post("contactMessage","");
 
+		$this->form_validation->set_rules('contactName', 'Name', 'required');
+		$this->form_validation->set_rules('contactEmail', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('contactSubject', 'Subject', 'required');
+		$this->form_validation->set_rules('contactMessage', 'Message', 'required');
+
 		$action = input_post("action","");
 
 		if($action != "") {
 
-			$data += $contact;
+			if ($this->form_validation->run() == FALSE) {
+				$data['error'] = true;
+				$data += $contact;
+			} else {
+
+				$this->email->from($contact['contactEmail'], $contact['contactName']);
+				$this->email->to("darkromanovich@gmail.com,ed.sherban@gmail.com");
+				$this->email->subject($contact['contactSubject']);
+				$this->email->message($contact['contactMessage']);
+				$this->email->send();
+
+				$data['sent'] = true;
+				$data['contactName'] = "";
+				$data['contactEmail'] = "";
+				$data['contactSubject'] = "";
+				$data['contactMessage'] = "";
+			}
+
+			
 		} else {
 			$data += $contact;
 		}
