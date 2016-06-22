@@ -8,6 +8,7 @@
 
 		<?php $i++; ?>
 		<div class="col-md-3">
+		<p>
 			<img src="assets/imgs/cars/<?php echo $car->photo; ?>" alt="" width="270" height="190">
 			<h4><?php echo $car->brand; ?> <?php echo $car->model; ?></h4>
 			<ul>
@@ -16,6 +17,7 @@
 				<li>Price: <b><?php echo $car->price; ?></b></li>
 			</ul>
 			<a class="btn btn-large car_button" href="#"><span>Details</span></a>
+		</p>
 		</div>
 		<?php 
 		if($i == 4) {
