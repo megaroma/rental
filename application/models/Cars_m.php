@@ -48,16 +48,15 @@ class Cars_m extends CI_Model {
                                 c.price,
                                 o.start_rent_time,
                                 o.end_rent_time,
-                                o.status,
+                                (select s.name from statuses s where s.id = o.status_id) as status,
                                 o.comment,
-                                o.fd as last_update
+                                o.dt as last_update
 
                         from orders o,cars c
                         where
                         o.car_id = c.id
                         and o.user_id = ?
-                        and NOW() between o.fd and o.td
-                        order by o.fd
+                        order by o.dt
                 ";
                 $query = $this->db->query($sql,array($user_id));
                 $result = $query->result();
