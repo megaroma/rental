@@ -64,6 +64,20 @@ class Manager extends CI_Controller {
 		$data['report'] = input_post("report","");
 		$data['dt_from'] = input_post("dt_from","");
 		$data['dt_till'] = input_post("dt_till","");
+		$data['report_sent'] = false;
+
+		if(($data['report'] != "") &&
+			($data['dt_from'] != "") &&
+			($data['dt_till'] != "")
+			) {
+
+			if($data['report'] == "Orders") {
+				$data['report_sent'] = true;
+			}
+
+
+
+		}
 
 		admin_view($this, 'reports' , $data);
 	}

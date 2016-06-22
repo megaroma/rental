@@ -37,6 +37,16 @@
 	  	</form>
   </div>
 </div>
+
+<?php if($report_sent): ?>
+<div class="panel panel-default">
+  	<div class="panel-heading"><?php echo $report." From: ".$dt_from." Till: ".$dt_till;?></div>
+  	<div class="panel-body">
+
+  </div>
+</div>
+<?php endif; ?>
+
     <script>
 
            $( ".datepicker-input" ).datepicker();
