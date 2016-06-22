@@ -27,7 +27,13 @@
 				</div>
 	  		</div>
 
+	  		<input type="hidden" name="action" value="run">
 
+	  		<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-4">
+		  			<button type="submit" class="btn btn-lg btn-primary btn-block">Run</button>
+				</div>
+	  		</div>
 	  	</form>
   </div>
 </div>
