@@ -164,7 +164,6 @@
     <script src="assets/js/jquery.appear.min.js"></script>
     <script src="assets/js/twitterFetcher.min.js"></script>
 	<script src="contact/jqBootstrapValidation.js"></script>
-	<script src="contact/contact_me.js"></script>
     <script src="assets/js/script.js"></script> 
     <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/jquery.form.min.js');?>"></script>
     <script src="<?php echo asset_url('grocery_crud/js/jquery_plugins/ui/jquery-ui-1.10.3.custom.min.js');?>"></script>
