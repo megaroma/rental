@@ -15,7 +15,7 @@
 
  			<div class="form-group">
 				<div class='datepicker input-group date' style="width:138px">
-				    <input type='text' class="form-control" placeholder="dd/mm/yyyy" name="dt_from" value=""/>
+				    <input type='text' class="datepicker-input form-control" placeholder="dd/mm/yyyy" name="dt_from" value=""/>
 				    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
 				    </span>
 				</div>
