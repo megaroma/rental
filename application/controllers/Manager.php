@@ -60,6 +60,7 @@ class Manager extends CI_Controller {
 
 	public function reports() {
 		$data = array();
+		$this->grocery_crud->set_table('roles');
 
 		admin_view($this, 'reports' , $data);
 	}
