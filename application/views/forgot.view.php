@@ -7,7 +7,7 @@
         <?php echo $message; ?>
   </div>
 	<?php else: ?>
-	<p>Enter your email to generate a new password.</p>
+	<p class="text-center">Enter your email to generate a new password.</p>
 			<?php if($error != ""): ?>
 				<div class="alert alert-danger" role="alert">
     <?php echo $error; ?>  
