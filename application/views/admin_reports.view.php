@@ -43,9 +43,13 @@
 <div class="panel panel-default">
   	<div class="panel-heading"><?php echo $report." From: ".$dt_from." Till: ".$dt_till;?></div>
   	<div class="panel-body">
+  	<?php if(is_array($report_body)): ?>
   	<?php foreach ($report_body as $line): ?>
   		<p><strong><?php echo $line->name; ?>:</strong> <?php echo $line->total; ?></p>
   	<?php endforeach; ?>
+  	<?php else: ?>
+  		<?php echo $report_body; ?>
+  	<?php endif; ?>
 
   </div>
 </div>
