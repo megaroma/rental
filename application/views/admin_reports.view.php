@@ -9,6 +9,7 @@
 		   			<select class="form-control" name="report">
   						<option>--Select Report--</option>
   						<option <?php echo ($report == "Orders")? "selected" : ""; ?> >Orders</option>
+  						<option <?php echo ($report == "Available Cars")? "selected" : ""; ?> >Available Cars</option>
  					 </select>
 				</div>
 	  		</div>
