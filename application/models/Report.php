@@ -46,7 +46,7 @@ class Report extends CI_Model {
                                         o.car_id = c.id and o.status_id in (3,4) and
                                         ((o.end_rent_time >= ?) and  (o.start_rent_time <= ? ))                        
 
-                "
+                ";
 
                 $query = $this->db->query($sql,$data);
                 $result = $query->result();
