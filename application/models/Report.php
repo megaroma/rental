@@ -17,7 +17,7 @@ class Report extends CI_Model {
                 $sql = "select 
                                 c.id,
                                 c.brand,
-                                c.model
+                                c.model,
                         from 
                         cars c 
                         where
@@ -38,7 +38,7 @@ class Report extends CI_Model {
                         select
                                 c.id,
                                 c.brand,
-                                c.model
+                                c.model,
                                 o.start_rent_time,
                                 o.end_rent_time,
                                 (select u.full_name from users where u.id = o.user_id) as user
