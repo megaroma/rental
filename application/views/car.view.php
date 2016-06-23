@@ -1,8 +1,11 @@
 <div class="container">
-<h1>Car Detail</h1>
-
-<img src="http://<?php echo base_url();?>assets/imgs/cars/<?php echo $car->photo; ?>">
-
+<h1 class="page-header text-center">Car Detail</h1>
+	<div class="row">
+		<div class="col-sm-7">
+			<img src="http://<?php echo base_url();?>assets/imgs/cars/<?php echo $car->photo; ?>" width="650" class="img-responsive">
+		</div>
+		<div class="col-sm-5">
+		<p><b>Characteristics:</b></p>	
 			<ul>
 				<li>Brand: <b><?php echo $car->brand; ?></b></li>
 				<li>Model: <b><?php echo $car->model; ?></b></li>
@@ -14,9 +17,9 @@
 				<li>Seats: <b><?php echo $car->seats; ?></b></li>
 				<li>Price: <b><?php echo $car->price; ?></b></li>
 			</ul>
-
-
-
+		</div>
+	</div>
+<h1 class="page-header text-center">Request form</h1>
 <?php if($request_form): ?>
   		<form class="form-horizontal" method="post">
 			<div class="form-group">

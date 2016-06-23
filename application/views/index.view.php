@@ -16,36 +16,32 @@
 	<div class="container text-center"> 
 		<div class="heading">
 			<h2>Our Services</h2>		
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, alias enim placeat earum quos ab.</p>
+			<p>We provide professional services to our clients:</p>
 		</div>
 		<div class="row services-list">
 			<div class="col-sm-6 col-md-3 text-center service animated fadeInUp visible" data-animation="fadeInUp">
 				<div class="service-icon"> 
-					<img src="assets/img/car-wash.jpg" alt=""/> 
+					<img src="assets/img/car-modi.jpg" alt=""/> 
 				</div>
-				<h4 class="color-white">Car Wash</h4>
-				<p>Lorem ipsum massa sed turpis ipsum dolor lorem luctus scelerisque gravida aliquet.</p>
+				<h4 class="color-white">Car Rental</h4>
 			</div><!-- END COLUMN 3 -->
 			<div class="col-sm-6 col-md-3 text-center service animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">
 				<div class="service-icon">
 					<img src="assets/img/car-service.jpg" alt=""/> 
 				</div>
 				<h4 class="color-white">Car Servicing</h4>
-				<p>Lorem ipsum massa sed turpis ipsum dolor lorem luctus scelerisque gravida aliquet.</p>
 			</div><!-- END COLUMN 3 -->
 			<div class="col-sm-6 col-md-3 text-center service animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400">
 				<div class="service-icon">
 					<img src="assets/img/Car-painting.jpg" alt=""/> 
 				</div>
 				<h4 class="color-white">Car Painting</h4>
-				<p>Lorem ipsum massa sed turpis ipsum dolor lorem luctus scelerisque gravida aliquet.</p>
 			</div><!-- END COLUMN 3 -->
 			<div class="col-sm-6 col-md-3 text-center service animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="600">
 				<div class="service-icon">
-					<img src="assets/img/car-modi.jpg" alt=""/> 
+					<img src="assets/img/car-wash.jpg" alt=""/> 
 				</div>
 				<h4 class="color-white">Car Modifying</h4>
-				<p>Lorem ipsum massa sed turpis ipsum dolor lorem luctus scelerisque gravida aliquet.</p>
 			</div><!-- END COLUMN 3 -->
 		</div>       
 	</div>
