@@ -79,7 +79,8 @@ class Manager extends CI_Controller {
 
 			if($data['report'] == "Available Cars") {
 				$data['report_sent'] = true;
-				$data['report_body'] = print_r($this->report->av_cars($data['dt_from'],$data['dt_till']) , true);
+				$data['report_body'] = $this->load->view('report_acars', $this->report->av_cars($data['dt_from'],$data['dt_till']), TRUE);
+ 
 			}
 
 
