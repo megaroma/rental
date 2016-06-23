@@ -77,6 +77,7 @@ class Manager extends CI_Controller {
 				$data['report_body'] = $this->report->orders($data['dt_from'],$data['dt_till']);
 			}
 
+			
 
 
 		}
