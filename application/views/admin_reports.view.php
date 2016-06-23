@@ -2,7 +2,7 @@
   	<div class="panel-heading">Reports</div>
   	<div class="panel-body">
 
-  		<form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>/manager/reports">
+  		<form class="form-horizontal" method="post" action="http://<?php echo base_url(); ?>manager/reports">
 			<div class="form-group">
 				<label for="inputReport" class="col-sm-2 col-sm-offset-1 control-label">Report:</label>
 				<div class="col-sm-6">

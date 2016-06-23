@@ -41,7 +41,7 @@ class Report extends CI_Model {
                                 c.model,
                                 o.start_rent_time,
                                 o.end_rent_time,
-                                (select u.full_name from users where u.id = o.user_id) as user
+                                (select u.full_name from users u where u.id = o.user_id) as user
                         from orders o, cars c where 
                                         o.car_id = c.id and o.status_id in (3,4) and
                                         ((o.end_rent_time >= ?) and  (o.start_rent_time <= ? ))                        
