@@ -17,7 +17,7 @@ class Report extends CI_Model {
                 $sql = "select 
                                 c.id,
                                 c.brand,
-                                c.model,
+                                c.model
                         from 
                         cars c 
                         where
